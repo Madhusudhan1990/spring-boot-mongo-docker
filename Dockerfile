@@ -12,7 +12,7 @@ RUN apk update && apk add /bin/sh
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
 
-COPY --from=madhu target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo.jar
+COPY --from=madhu /app/target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo.jar
 
 WORKDIR $PROJECT_HOME
 EXPOSE 8080
